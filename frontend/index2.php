@@ -45,48 +45,30 @@ session_start();?>
 					<div class="col-12">
 						<div class="header__content">
 							<!-- header logo -->
-							<a href="index.html" class="header__logo">
+							<a href="index2.php" class="header__logo">
 								<img src="img/logo.png" alt="">
 							</a>
 							<!-- end header logo -->
 
 							<!-- header nav -->
 							<ul class="header__nav">
-								<!-- dropdown -->
+								<!-- seccion -->
 								<li class="header__nav-item">
-									<a href="index2.html" class="header__nav-link">Inicio</a>
+									<a href="index2.php" class="header__nav-link">Inicio</a>
 								</li>
-								<!-- end dropdown -->
+								<!-- end seccion -->
 
-								<!-- dropdown -->
+								<!-- seccion -->
 								<li class="header__nav-item">
-									<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catalogo</a>
-
-									<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog">
-										<li><a href="catalog1.html">Catalog Grid</a></li>
-										<li><a href="catalog2.html">Catalog List</a></li>
-										<li><a href="details1.html">Details Movie</a></li>
-										<li><a href="details2.html">Details TV Series</a></li>
-									</ul>
+									<a href="catalog1.php" class="header__nav-link">Catalogo</a>
 								</li>
-								<!-- end dropdown -->
+								<!-- end seccion -->
 
+								<!-- seccion -->
 								<li class="header__nav-item">
-									<a href="faq.html" class="header__nav-link">Ayuda</a>
+									<a href="faq.php" class="header__nav-link">Ayuda</a>
 								</li>
-
-								<!-- dropdown -->
-								<li class="dropdown header__nav-item">
-									<a class="dropdown-toggle header__nav-link header__nav-link--more" href="#" role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon ion-ios-more"></i></a>
-
-									<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
-										<li><a href="about.html">About</a></li>
-										<li><a href="signin.html">Sign In</a></li>
-										<li><a href="signup.html">Sign Up</a></li>
-										<li><a href="404.html">404 Page</a></li>
-									</ul>
-								</li>
-								<!-- end dropdown -->
+								<!-- end seccion -->
 							</ul>
 							<!-- end header nav -->
 
@@ -100,8 +82,8 @@ session_start();?>
 									<i class="icon ion-ios-log-in"></i>
 									<span> <?php if (isset($_SESSION['nombreusuario'])) {
 										
-    echo '<p> ' . $_SESSION['nombreusuario'] . '</p>';
-}else{     header("Location:../frontend/pages/login.php");}?></span>
+   											 echo '<p> ' . $_SESSION['nombreusuario'] . '</p>';
+											}else{     header("Location:../frontend/pages/login.php");}?></span>
 								</a>
 							</div>
 							<!-- end header auth -->

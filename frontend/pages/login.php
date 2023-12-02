@@ -59,12 +59,13 @@
 								<label for="remember">Remember Me</label>
 							</div>
 							
-							<button class="sign__btn" type="submit">Sign in</button>
+							<button class="sign__btn" type="submit">Iniciar session</button>
 
-							<span class="sign__text">Don't have an account? <a href="./registro.php">Sign up!</a></span>
+							<span class="sign__text">¿No tienes una cuenta? <a href="./registro.php">Registrate</a></span>
 
-							<span class="sign__text"><a href="#">Forgot password?</a></span>
+							<span class="sign__text"><a href="../index.php">volver atras</a></span>
 						</form>
+							
 						<!-- end authorization form -->
 					</div>
 				</div>

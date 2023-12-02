@@ -164,12 +164,15 @@
   
                 <!-- Submit button -->
                 <button type="submit" class="btn btn-primary btn-block mb-4">
-                  Sign up
+                  Inscribirse
                 </button>
   
                 <!-- Register buttons -->
+
              
               </form>
+              <br>
+                <span class="sign__text"><a href="../index.php"><button >volver atras</button></a></span>
             </div>
           </div>
         </div>

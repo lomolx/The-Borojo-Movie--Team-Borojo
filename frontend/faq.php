@@ -1,3 +1,5 @@
+<?php 
+session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,48 +45,30 @@
 					<div class="col-12">
 						<div class="header__content">
 							<!-- header logo -->
-							<a href="index.html" class="header__logo">
+							<a href="index2.php" class="header__logo">
 								<img src="img/logo.png" alt="">
 							</a>
 							<!-- end header logo -->
 
 							<!-- header nav -->
 							<ul class="header__nav">
-								<!-- dropdown -->
+								<!-- seccion -->
 								<li class="header__nav-item">
-									<a href="index2.html" class="header__nav-link">Inicio</a>
+									<a href="index2.php" class="header__nav-link">Inicio</a>
 								</li>
-								<!-- end dropdown -->
+								<!-- end seccion -->
 
-								<!-- dropdown -->
+								<!-- seccion -->
 								<li class="header__nav-item">
-									<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catalogo</a>
-
-									<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog">
-										<li><a href="catalog1.html">Catalog Grid</a></li>
-										<li><a href="catalog2.html">Catalog List</a></li>
-										<li><a href="details1.html">Details Movie</a></li>
-										<li><a href="details2.html">Details TV Series</a></li>
-									</ul>
+									<a href="catalog1.php" class="header__nav-link">Catalogo</a>
 								</li>
-								<!-- end dropdown -->
+								<!-- end seccion -->
 
+								<!-- seccion -->
 								<li class="header__nav-item">
-									<a href="faq.html" class="header__nav-link">Ayuda</a>
+									<a href="faq.php" class="header__nav-link">Ayuda</a>
 								</li>
-
-								<!-- dropdown -->
-								<li class="dropdown header__nav-item">
-									<a class="dropdown-toggle header__nav-link header__nav-link--more" href="#" role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon ion-ios-more"></i></a>
-
-									<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
-										<li><a href="about.html">About</a></li>
-										<li><a href="signin.html">Sign In</a></li>
-										<li><a href="signup.html">Sign Up</a></li>
-										<li><a href="404.html">404 Page</a></li>
-									</ul>
-								</li>
-								<!-- end dropdown -->
+								<!-- end seccion -->
 							</ul>
 							<!-- end header nav -->
 
@@ -94,9 +78,12 @@
 									<i class="icon ion-ios-search"></i>
 								</button>
 
-								<a href="signin.html" class="header__sign-in">
+								<a href="../backend/logout.php" class="header__sign-in">
 									<i class="icon ion-ios-log-in"></i>
-									<span>Iniciar session</span>
+									<span> <?php if (isset($_SESSION['nombreusuario'])) {
+										
+   											 echo '<p> ' . $_SESSION['nombreusuario'] . '</p>';
+											}else{     header("Location:../frontend/pages/login.php");}?></span>
 								</a>
 							</div>
 							<!-- end header auth -->
@@ -161,55 +148,55 @@
 			<div class="row">
 				<div class="col-12 col-md-6">
 					<div class="faq">
-						<h3 class="faq__title">Why is a Video is not loading?</h3>
+						<h3 class="faq__title">¿Por qué no se carga un vídeo?</h3>
 						<p class="faq__text">All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
-						<p class="faq__text">Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+						<p class="faq__text">Varias versiones han evolucionado a lo largo de los años, a veces por accidente, a veces a propósito (humor inyectado y cosas por el estilo).</p>
 					</div>
 
 					<div class="faq">
-						<h3 class="faq__title">Why isn't there a HD version of this video?</h3>
+						<h3 class="faq__title">¿Por qué no hay una versión HD de este video?</h3>
 						<p class="faq__text">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
 					</div>
 
 					<div class="faq">
-						<h3 class="faq__title">Why is the sound distorted?</h3>
-						<p class="faq__text">Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+						<h3 class="faq__title">¿Por qué se distorsiona el sonido?</h3>
+						<p class="faq__text">Varias versiones han evolucionado a lo largo de los años, a veces por accidente, a veces a propósito (humor inyectado y cosas por el estilo).</p>
 					</div>
 
 					<div class="faq">
-						<h3 class="faq__title">Why is the Video stuttering, buffering or randomly stopping?</h3>
+						<h3 class="faq__title">¿Por qué el vídeo tartamudea, se almacena en el búfer o se detiene aleatoriamente?</h3>
 						<p class="faq__text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
 					</div>
 
 					<div class="faq">
-						<h3 class="faq__title">When I change the quality of a video, nothing happens.</h3>
+						<h3 class="faq__title">Cuando cambio la calidad de un vídeo, no pasa nada.</h3>
 						<p class="faq__text">If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
 					</div>
 				</div>
 
 				<div class="col-12 col-md-6">
 					<div class="faq">
-						<h3 class="faq__title">Why isn't the video starting at the beginning?</h3>
-						<p class="faq__text">The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+						<h3 class="faq__title">¿Por qué el vídeo no empieza por el principio?</h3>
+						<p class="faq__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non dignissimos consequuntur nemo quos cumque, ipsa officia? Assumenda esse minus consequatur aliquid pariatur quo? Veniam facere iure velit voluptates. Labore, odio?</p>
 					</div>
 
 					<div class="faq">
-						<h3 class="faq__title">How do I make the Video go Fullscreen?</h3>
-						<p class="faq__text">It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+						<h3 class="faq__title">¿Cómo hago para que el vídeo pase a pantalla completa?</h3>
+						<p class="faq__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ipsam impedit similique quam aut, tempora obcaecati voluptatem sint temporibus, fugit earum fugiat saepe pariatur aliquam maxime deserunt minus? Culpa, possimus.</p>
 					</div>
 
 					<div class="faq">
-						<h3 class="faq__title">What Browsers are supported?</h3>
-						<p class="faq__text">It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+						<h3 class="faq__title">¿Qué navegadores son compatibles?</h3>
+						<p class="faq__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur voluptates voluptas sequi? Eos, iusto. Possimus earum similique quibusdam voluptas dolorum inventore obcaecati doloribus officiis consequuntur rem nam, blanditiis enim nobis?</p>
 					</div>
 
 					<div class="faq">
-						<h3 class="faq__title">How do you handle my privacy?</h3>
-						<p class="faq__text">Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+						<h3 class="faq__title">¿Cómo manejan mi privacidad?</h3>
+						<p class="faq__text">Varias versiones han evolucionado a lo largo de los años, a veces por accidente, a veces a propósito (humor inyectado y cosas por el estilo).</p>
 					</div>
 
 					<div class="faq">
-						<h3 class="faq__title">How can I contact you?</h3>
+						<h3 class="faq__title">¿Cómo puedo contactarte?</h3>
 						<p class="faq__text">The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
 					</div>
 				</div>
