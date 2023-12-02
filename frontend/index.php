@@ -52,7 +52,7 @@
 							<!-- header auth -->
 							<div class="header__auth">
 
-								<a href="signin.html" class="header__sign-in">
+								<a href="./pages/login.php" class="header__sign-in">
 									<i class="icon ion-ios-log-in"></i>
 									<span>Iniciar session</span>
 								</a>
