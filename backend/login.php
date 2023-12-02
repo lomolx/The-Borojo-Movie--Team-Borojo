@@ -24,8 +24,13 @@ if ($row) {
         #aquí debe redigir a la otra actividad
        $_SESSION['nombreusuario'] = $row['nombres']." ".$row[ 'apellidos'];
        # $_SESSION['sesion'] == true;
+<<<<<<< HEAD
        //header("Location:problematica/");
        echo "epa manito";
+=======
+       header("Location:../frontend/index2.php");
+      
+>>>>>>> tonyRama
     } else {
        // header("Location:login.php?error=1");
        echo "no manito";

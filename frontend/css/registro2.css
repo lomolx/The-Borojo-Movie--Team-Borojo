@@ -2212,6 +2212,7 @@ progress {
 .form-control {
   display: block;
   width: 100%;
+<<<<<<< HEAD
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   font-weight: 400;
@@ -2220,6 +2221,17 @@ progress {
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ced4da;
+=======
+  height: 50px;
+  padding: 0 20px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: white;
+  background-color: #2b2b31;
+  background-clip: padding-box;
+  border: none;
+>>>>>>> tonyRama
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -2237,6 +2249,13 @@ progress {
 .form-control[type=file]:not(:disabled):not([readonly]) {
   cursor: pointer;
 }
+<<<<<<< HEAD
+=======
+form{
+   
+
+}
+>>>>>>> tonyRama
 .form-control:focus {
   color: #212529;
   background-color: #fff;
@@ -4569,6 +4588,11 @@ textarea.form-control-lg {
 .card-body {
   flex: 1 1 auto;
   padding: 1rem 1rem;
+<<<<<<< HEAD
+=======
+  border: 1px solid;
+  border-image: -webkit-linear-gradient(90deg, #9cb90e 0%, #4ac11a 100%);
+>>>>>>> tonyRama
 }
 
 .card-title {
