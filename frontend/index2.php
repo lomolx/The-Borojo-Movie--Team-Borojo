@@ -99,8 +99,9 @@ session_start();?>
 								<a href="../backend/logout.php" class="header__sign-in">
 									<i class="icon ion-ios-log-in"></i>
 									<span> <?php if (isset($_SESSION['nombreusuario'])) {
+										
     echo '<p> ' . $_SESSION['nombreusuario'] . '</p>';
-}else{      header("Location:../frontend/pages/login.php");}?></span>
+}else{     header("Location:../frontend/pages/login.php");}?></span>
 								</a>
 							</div>
 							<!-- end header auth -->

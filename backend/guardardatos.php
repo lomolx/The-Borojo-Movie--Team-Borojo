@@ -15,9 +15,9 @@ if ($_POST['contraseña'] != $_POST['contraseña2']) {
  
  #3 Crear comando sql 
  $sql = "insert into usuarios(documento,nombres,apellidos,fecha,correo,telefono,contraseña,fechar) values 
- ('".$_POST['nombre']."',
+ ( '".$_POST['documento']."',
+   '".$_POST['nombre']."',
  '".$_POST['apellido']."',
- '".$_POST['documento']."',
  '".$_POST['fecha']."',
  '".$_POST['email']."',
  '".$_POST['phone']."',
@@ -31,6 +31,9 @@ if ($_POST['contraseña'] != $_POST['contraseña2']) {
  #5 Verificar ejecución
   if ($resultado) {
     // echo "Se guardó la información";
+     $_SESSION['nombreusuario'] = $_POST['nombre']." ".$_POST['apellido'];
+     var_dump($_SESSION['nombreusuario']);
+     exit();
      header("Location: ../frontend/index2.php");
      #aquí debe redigir a la otra actividad
   }else{
