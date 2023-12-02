@@ -8,16 +8,26 @@ if (!$conexion) {
 #VERIFICAMOS SI LAS CONTRASEÑAS COINCIDEN
 if ($_POST['contraseña'] != $_POST['contraseña2']) {
  
+<<<<<<< HEAD
     header("Location: registro.php?e=1");
+=======
+    header("Location: ../frontend/pages/registro.php?e=1");
+>>>>>>> tonyRama
  } else {
     #ENCRIPTAR LA CONTRASEÑA
  $contraseña_encriptada = password_hash($_POST['contraseña2'], PASSWORD_DEFAULT);
  
  #3 Crear comando sql 
  $sql = "insert into usuarios(documento,nombres,apellidos,fecha,correo,telefono,contraseña,fechar) values 
+<<<<<<< HEAD
  ('".$_POST['nombre']."',
  '".$_POST['apellido']."',
  '".$_POST['documento']."',
+=======
+ ( '".$_POST['documento']."',
+   '".$_POST['nombre']."',
+ '".$_POST['apellido']."',
+>>>>>>> tonyRama
  '".$_POST['fecha']."',
  '".$_POST['email']."',
  '".$_POST['phone']."',
@@ -31,7 +41,14 @@ if ($_POST['contraseña'] != $_POST['contraseña2']) {
  #5 Verificar ejecución
   if ($resultado) {
     // echo "Se guardó la información";
+<<<<<<< HEAD
      header("Location: registro.php?correcto=1");
+=======
+     $_SESSION['nombreusuario'] = $_POST['nombre']." ".$_POST['apellido'];
+     var_dump($_SESSION['nombreusuario']);
+     exit();
+     header("Location: ../frontend/index2.php");
+>>>>>>> tonyRama
      #aquí debe redigir a la otra actividad
   }else{
      echo "Hubo un error: ". mysqli_error($conexion);
@@ -45,4 +62,8 @@ $correo = $_POST['correo'];
 $telefono = $_POST['telefono'];
 $fecha_de_nacimiento = $_POST['fecha'];
 $contraseña1 = $_POST['contraseña'];
+<<<<<<< HEAD
 $contraseña2 = $_POST['contraseña2'];*/
+=======
+$contraseña2 = $_POST['contraseña2'];*/
+>>>>>>> tonyRama

@@ -1,0 +1,22 @@
+nav{
+    height: 70px;
+    background-color: black;
+}
+.item{
+    width: 210px;
+}
+.owl-item{
+    width: 210px;
+}
+ .active{
+    width: 210px;
+}
+.card__content{
+    display: none;
+}
+.card__cover:hover{
+    cursor: pointer;
+    .card__content{
+        display: grid;
+    }
+}
